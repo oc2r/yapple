@@ -1,3 +1,11 @@
 body{
     color : red;
 }
+
+header{
+    border: 1px black solid;
+}
+
+.yapps-img, .panier-img{
+    max-width: 3%;
+}
