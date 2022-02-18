@@ -27,23 +27,23 @@
                 </div>
 
                 <div class="header-1-utilisateur">
-                    <div class="compte">
-                    <img
-                        class="compte-img logo-img"
-                        src="./image/compte.png"
-                        alt="compte"
-                    />
-                    </div>
+                    <div class="header-1-utilisateur-compte-favoris">
+                        <div class="compte">
+                        <img
+                            class="compte-img logo-img"
+                            src="./image/compte-blanc.png"
+                            alt="compte"
+                        />
+                        </div>
 
-                    <div class="favoris">
-                    <img
-                        class="favoris-img logo-img"
-                        src="./image/favoris-plein.png"
-                        alt="favoris"
-                    />
+                        <div class="favoris">
+                        <img
+                            class="favoris-img logo-img"
+                            src="./image/favoris-plein-blanc.png"
+                            alt="favoris"
+                        />
+                        </div>
                     </div>
-
-                    <div class="ligne-verticale"></div>
 
                     <div class="yapps-nb">
                     <img
@@ -51,7 +51,7 @@
                         src="./image/yapp.png"
                         alt="yapps"
                     />
-                    <p>223</p>
+                    <p><mark>223</mark></p>
                     </div>
                 </div>
             </div>
@@ -78,52 +78,65 @@
     </header>
 
     <main>
+        <div class="recette-img-conteneur-favoris">
+            <img class="recette-img-conteneur-favoris-coeur" src="./image/favoris-vide-blanc.png" alt="">
+        </div>
         <div class="ariane">
             <p>fil d'ariane</p>
         </div>
+        
         <section class="recette">
             <div class="recette-img-conteneur">
                 <!-- <img class="recette-img" src="./image/croissant.png" alt="croissant"/> -->
             </div>
 
             <div class='recette-titre'>
-                <h2 class="recette-titre">Croissant healthy</h2>
-                <img class="nutriscore-img" src="./image/nutriscore.png" alt="nutri-score"/>
+                <h1 class="recette-titre">Croissant healthy</h1>
+                <div class="recette-nutriscore">
+                    <img class="recette-nutriscore-img" src="./image/nutriscore.png" alt="nutri-score"/>
+                </div>
             </div>
 
             <div class="recette-chiffre">
-                <div class="recette-chiffre-nb-personnes">
-                    <p>Nombre de personnes</p>
-                    <div class="recette-chiffre-compteur">
-                        <div class="recette-chiffre-compteur-moins-conteneur">
-                            <img class="recette-chiffre-compteur-moins" src="image/moins.png" alt="moins">
+                <div class="recette-chiffre-separe">
+                    <div class="recette-chiffre-nb-personnes">
+                        <p>Nombre de personnes</p>
+                        <div class="recette-chiffre-compteur">
+                            <div class="nb-clef recette-chiffre-compteur-moins-conteneur">
+                                <p class="nb-clef"><em>-</em></p>
+                                <!-- <img class="recette-chiffre-compteur-moins" src="image/moins.png" alt="moins"> -->
+                            </div>
+                            <div class="nb-clef recette-chiffre-compteur-nombre"><em>3</em></div>
+                            <div class=" recette-chiffre-compteur-moins-conteneur">
+                                <p class="nb-clef"><em>+</em></p>
+                                <!-- <img class="recette-chiffre-compteur-plus" src="image/plus.png" alt="plus"> -->
+                            </div>
                         </div>
-                        <div class="recette-chiffre-compteur-nombre">10</div>
-                        <div class="recette-chiffre-compteur-moins-conteneur">
-                            <img class="recette-chiffre-compteur-plus" src="image/plus.png" alt="plus">
+                    </div>
+                    <div class="recette-chiffre-total">
+                        <p>Prix total de la recette</p>
+                        <div class="recette-chiffre-total-prix">
+                            <p class="nb-clef"><em>18,20</em></p>
+                            <p><em>€</em></p>
                         </div>
                     </div>
                 </div>
-                <div class="recette-chiffre-total">
-                    <p>Prix total de la recette</p>
-                    <div class="recette-chiffre-total-prix">
-                        <p>454</p>
-                        <p>€</p>
-                    </div>
-                </div>
-                <div class="recette-chiffre-yapps">
-                    <p>La recette rapporte :</p>
-                    <div class="recette-chiffre-yapps-compteur">
-                        <img class="recette-chiffre-yapps-img" src="./image/yapp.png" alt="yapps" />
-                        <p>454</p>
-                        <p>yapps</p>
+                <div class='recette-chiffre-barre-separe'>
+                    <div class="recette-chiffre-barre"></div>
+                    <div class="recette-chiffre-yapps">
+                        <p>La recette rapporte</p>
+                        <div class="recette-chiffre-yapps-compteur">
+                            <img class="recette-chiffre-yapps-img" src="./image/yapp.png" alt="yapps" />
+                            <p class="nb-clef"><em>180</em></p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="recette-descriptif">
-                <h3>Détails</h3>
-                <p class="recette-descriptif-decription">
+                <h2>Détails</h2>
+                <div class="recette-descriptif-description">
+                    <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
                     ratione et magnam reprehenderit eligendi itaque nulla vero, mollitia
                     fuga eaque sit labore aut at quas fugit id. Dolor ad eveniet
@@ -134,8 +147,11 @@
                     tempora necessitatibus odio non porro. Porro accusantium eos illo
                     sed necessitatibus eaque deleniti cumque quasi, itaque vitae tenetur
                     esse reiciendis, voluptas tempore numquam expedita eligendi earum
-                    et? Ad repellendus nobis itaque ipsa vitae?
-                </p>
+                    et? Ad repellendus nobis itaque ipsa vitae?</p>
+                    <div class="recette-descriptif-description-voir-plus">
+                        <!-- <p>Voir plus</p> -->
+                    </div>
+                </div>
                 <div class="recette-descriptif-menu-deroulant">
                     <p>Vitamines</p>
                     <img src="./image/fleche-derouler.png" alt="fleche-derouler">
@@ -148,128 +164,138 @@
         </section>
 
         <section class='ingredient'>
-            <h3>Ingrédients</h3>
+            <h2>Ingrédients</h2>
             <div class='ingredient-card-conteneur'>
                 <div class="ingredient-card">
                     <div class="bouton-plus">
-                        <p>+</p>
+                        <p class="nb-clef plus">+</p>
                     </div>
 
                     <img class='ingredient-card-img' src="./image/ingredient-eau.jpg" alt="eau" />
                     <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'>- 00 %</p>
+                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
                         <div class='ingredient-card-prix-nombre'>
                             <p>000.00</p>
                             <p>€</p>
                         </div>
-                        <p>Nom produit</p>
+                        <p><strong>Eau</strong></p>
+                        <p><span>pack 6 x 1 L</span></p>
                     </div>
                 </div>
                 <div class="ingredient-card">
                     <div class="bouton-plus">
-                        <p>+</p>
+                        <p class="nb-clef plus">+</p>
                     </div>
 
                     <img class='ingredient-card-img' src="./image/ingredient-farine.jpg" alt="farine" />
                     <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'>- 00 %</p>
+                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
                         <div class='ingredient-card-prix-nombre'>
                             <p>000.00</p>
                             <p>€</p>
                         </div>
-                        <p>Nom produit</p>
+                        <p><strong>Farine</strong></p>
+                        <p><span>1 kg</span></p>
                     </div>
                 </div>
                 <div class="ingredient-card">
                     <div class="bouton-plus">
-                        <p>+</p>
+                        <p class="nb-clef plus">+</p>
                     </div>
 
                     <img class='ingredient-card-img' src="./image/ingredient-lait.jpg" alt="lait" />
                     <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'>- 00 %</p>
+                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
                         <div class='ingredient-card-prix-nombre'>
                             <p>000.00</p>
                             <p>€</p>
                         </div>
-                        <p>Nom produit</p>
+                        <p><strong>Lait</strong></p>
+                        <p><span>1 L</span></p>
                     </div>
                 </div>
                 <div class="ingredient-card">
                     <div class="bouton-plus">
-                        <p>+</p>
+                        <p class="nb-clef plus">+</p>
                     </div>
 
                     <img class='ingredient-card-img' src="./image/ingredient-levure.jpg" alt="levure" />
                     <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'>- 00 %</p>
+                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
                         <div class='ingredient-card-prix-nombre'>
                             <p>000.00</p>
                             <p>€</p>
                         </div>
-                        <p>Nom produit</p>
+                        <p><strong>Levure</strong></p>
+                        <p><span>150 g</span></p>
                     </div>
                 </div>
                 <div class="ingredient-card">
                     <div class="bouton-plus">
-                        <p>+</p>
+                        <p class="nb-clef plus">+</p>
                     </div>
 
                     <img class='ingredient-card-img' src="./image/ingredient-oeuf.jpg" alt="oeuf" />
                     <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'>- 00 %</p>
+                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
                         <div class='ingredient-card-prix-nombre'>
                             <p>000.00</p>
                             <p>€</p>
                         </div>
-                        <p>Nom produit</p>
+                        <p><strong>Oeufs</strong></p>
+                        <p><span>6 unités</span></p>
                     </div>
                 </div>
                 <div class="ingredient-card">
                     <div class="bouton-plus">
-                        <p>+</p>
+                        <p class="nb-clef plus">+</p>
                     </div>
 
                     <img class='ingredient-card-img' src="./image/ingredient-sel.jpg" alt="sel" />
                     <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'>- 00 %</p>
+                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
                         <div class='ingredient-card-prix-nombre'>
                             <p>000.00</p>
                             <p>€</p>
                         </div>
-                        <p>Nom produit</p>
+                        <p><strong>Sel</strong></p>
+                        <p><span>100 g</span></p>
                     </div>
                 </div>
                 <div class="ingredient-card">
                     <div class="bouton-plus">
-                        <p>+</p>
+                        <p class="nb-clef plus">+</p>
                     </div>
 
                     <img class='ingredient-card-img' src="./image/ingredient-sirop-erable.jpg" alt="sirop-erable" />
                     <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'>- 00 %</p>
+                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
                         <div class='ingredient-card-prix-nombre'>
                             <p>000.00</p>
                             <p>€</p>
                         </div>
-                        <p>Nom produit</p>
+                        <p><strong>Sirop d'érable</strong> </p>
+                        <p><span>20 cl</span></p>
                     </div>
                 </div>
             </div>
         </section>
     
         <div class="aide">
-            <p>Besoin d'aide ?</p>
+            <p>Besoin <br> d'aide ?</p>
             <img class='aide-logo' src="./image/logo-clair.png" alt="logo-clair" />
         </div>
 
         <div class="ajout-panier">
-            <div class="ajout-panier-bouton">Ajouter au panier</div>
+            <div class="ajout-panier-bouton">
+                <p><em>Ajouter</em></p>
+                <img class="ajout-panier-bouton-panier" src="./image/panier-blanc.png" alt="panier">
+            </div>
             <div class="ajout-panier-info">
                 <p>Prix de la recette :</p>
                 <div class="ajout-panier-info-prix">
-                    <p>000.00</p>
-                    <p>€</p>
+                    <p><em>000.00</em></p>
+                    <p><em>€</em></p>
                 </div>
             </div>
         </div>

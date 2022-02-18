@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    background: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -48,8 +49,113 @@ table {
 }
 
 /*fin css reset*/
-h3{
+
+/* polices */
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/montserrat-regular.woff2"), url("fonts/montserrat-regular.woff");
+  }
+  
+  @font-face {
+    font-family: "Montserrat SemiBold";
+    src: url("fonts/montserrat-semibold.woff2"), url("fonts/montserrat-semibold.woff");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Montserrat SemiBold Italic";
+    src: url("fonts/montserrat-semibolditalic.woff2"), url("fonts/montserrat-semibolditalic.woff");
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "Montserrat Bold";
+    src: url("fonts/montserrat-bold.woff2"), url("fonts/montserrat-bold.woff");
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: "Montserrat Italic";
+    src: url("fonts/montserrat-italic.woff2"), url("fonts/montserrat-italic.woff");
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Segoe UI";
+    src: url("fonts/segoe-ui.woff2"), url("fonts/segoe-ui.woff");
+  }
+  
+  @font-face {
+    font-family: "Segoe UI Bold";
+    src: url("fonts/segoe-ui-bold.woff2"), url("fonts/segoe-ui-bold.woff");
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: "Segoe UI Italic";
+    src: url("fonts/segoe-ui-italic.woff2"), url("fonts/segoe-ui-italic.woff");
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Segoe UI Bold Italic";
+    src: url("fonts/segoe-ui-bold-italic.woff2"), url("fonts/segoe-ui-bold-italic.woff");
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+
+/* fin polices  */
+
+body{
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+h1{
+    font-family: 'Segoe UI Bold', system-ui, sans-serif;
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+h2{
+    font-family: 'Segoe UI SemiBold', system-ui, sans-serif;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
+    line-height: 2rem;
+}
+
+h3{
+    font-family: 'Montserrat SemiBold', system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+p{
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+strong, mark{
+    font-family: 'Montserrat Bold', system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+em{
+    font-family: 'Montserrat Bold', system-ui, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
+
+span{
+    font-family: 'Montserrat Italic', system-ui, sans-serif;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
 }
 
 img {
@@ -84,6 +190,14 @@ header{
     align-items: center;
 }
 
+.yapps-img{
+    object-fit: contain;
+}
+
+.yapps-nb em{
+    font-size: 1rem;!important
+}
+
 .yapps-nb{
     display: flex;
     gap:0.5rem;
@@ -115,41 +229,73 @@ header{
     display: none;
 }
 
+.logo img, .compte img, .favoris img{
+    object-fit: contain;
+    max-height: 1rem;
+    max-width: 1rem;
+}
+
+.header-1-utilisateur-compte-favoris{
+    display: none;
+    flex-direction: row;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: #A0C16C;
+}
 
 .header-2{
+    position: relative;
     display: flex;
     align-items: center;
     padding:0rem 0rem 0rem 1rem;
 }
 
-.panier{
-    position: relative;
+.retour-img{
+    position: absolute;
+    top:-0.5rem;
+    height: 3rem;;
 }
 
-.panier-nb{
-    position: absolute;
-    right: -0.5rem;
-    top: -0.5rem;
-    height: 1rem;
-    width: 1rem;
+.panier{
+    position: relative;
+    min-width: 3rem;
+    min-height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.panier-img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.panier-nb{
+    position: absolute;
+    right: -0.5rem;
+    top: 0rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A0C16C;
+    border-radius: 0.2rem;
+}
+
 .ligne-verticale{
     position: relative;
-    /* border-left: 1px solid #000; */
+    border-left: 1px solid #000;
     display: block;
     height: 100%;
   }
 
 main{
-    padding-top: 6rem;
-    position: relative;
-    display: flex block;
+    padding-top: 8rem;
+    display: flex;
     flex-direction: column;
     margin-bottom: 6rem;
+    width: 100%;
 }
 
 .recette{
@@ -160,7 +306,25 @@ main{
 .recette-img-conteneur{
     height: 15rem;
     background: no-repeat center/cover url("./image/croissant.png");
-    min-height: ;
+}
+
+.recette-img-conteneur-favoris{
+    position: sticky;
+    position: -webkit-sticky; /*Safari*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    top: 9.5rem;
+    left: calc(100% - 4rem);
+    border-radius: 1rem;
+    /* box-shadow: 0rem 0rem 0.2rem 0.05rem #bec2b7; */
+    background-color: #A0C16C;
+    padding: 0.5rem;    
+    max-width:80%;
+    z-index: 1;
+    object-fit: contain;
 }
 
 .recette-img{
@@ -169,30 +333,55 @@ main{
 }
 
 .ariane{
-    display: block;
+    display: none;
     padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .recette-titre{
     display: flex;
+    min-width:75%;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 0.5rem;
 }
 
-.nutriscore-img{
-    width: 5rem;
+.recette-nutriscore{
+    padding: 0.5em;
+    min-width: 3rem;
+}
+
+.recette-nutriscore-img{
+    min-width: 3rem;
+    position: relative;
+    object-fit: contain;
 }
 
 .recette-chiffre{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap:2rem;
-    padding: 2rem 0rem 2rem 0rem;
+    padding: 2rem 4rem 2rem 4rem;
 
     /* background-color: lightseagreen; */
+}
+
+.nb-clef{
+    font-size: 2rem;
+    padding-bottom: 0.6rem;
+}
+
+.plus{
+    color: #fff;
+}
+
+.recette-chiffre-separe{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;    
 }
 
 .recette-chiffre-nb-personnes, .recette-chiffre-total, .recette-chiffre-yapps{
@@ -201,6 +390,11 @@ main{
     justify-content: center;
     align-items: center;
     gap:1rem;
+    min-width: 10rem;
+}
+
+.recette-chiffre-nb-personnes p, .recette-chiffre-total p, .recette-chiffre-yapps p{
+    text-align: center;
 }
 
 .recette-chiffre-compteur{
@@ -209,6 +403,8 @@ main{
     align-items: center;
     justify-content: center;
     gap: 0.2rem;
+    border-radius: 0.5rem;
+    background-color: #e6e9e0;
 }
 
 .recette-chiffre-compteur-moins-conteneur, .recette-chiffre-compteur-nombre, .recette-chiffre-compteur-plus-conteneur{
@@ -217,7 +413,9 @@ main{
     display:flex;
     justify-content: center;
     align-items: center;
+    padding: 0.5rem
 }
+
 .recette-chiffre-compteur-nombre{
     width:40%;
 }
@@ -239,7 +437,13 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+}
+
+.recette-chiffre-barre{
+    display: none;
+    border-right: 1px solid #000;
+    height: 5rem;
 }
 
 .recette-chiffre-yapps-img{
@@ -252,6 +456,28 @@ main{
     flex-direction: column;
     gap: 0.5rem;
 }
+
+.recette-descriptif-description{
+    position: relative;
+    /* height: 4.5rem; */
+    contain: content;
+}
+
+/* .recette-descriptif-description-voir-plus{
+    border: 1px solid #000;
+    position: absolute;
+    top: 2.7rem;
+    right: 1rem;
+    width: 6rem;
+    padding:0.2rem;
+    text-decoration: underline;
+    box-shadow: 0rem 0rem 0.5rem 0.2rem #fff;
+    background-color: #fff;
+} */
+
+/* .recette-descriptif-description:active{
+    height: 10rem;
+} */
 
 .recette-descriptif-menu-deroulant{
     padding: 1rem 0rem 1rem 0rem;
@@ -288,7 +514,10 @@ main{
     background-color: #A0C16C;
     border-radius: 0.2rem;
     box-shadow: 0rem 0rem 0.2rem 0.05rem #bec2b7;
+}
 
+.bouton-plus p{
+    padding: 0;
 }
 
 .ingredient-card{
@@ -331,11 +560,17 @@ main{
 
 /* éléments fixes bas d'écran */
 .aide{
-    display: flex;
-    flex-direction: row;
     position: fixed;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
     align-items: center;
-    right: 0.5rem;
+    right: 1rem;
+    bottom: 7rem;
+    z-index:1;
+    background-color: #A0C16C;
+    padding: 0.5rem ;
+    border-radius: 1rem;
 }
 
 .aide-logo{
@@ -360,9 +595,22 @@ main{
 }
 
 .ajout-panier-bouton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #A0C16C;
     border-radius: 0.5rem;
     padding: 1rem 0.5rem 1rem 0.5rem;
+    min-width: 5rem;
+}
+
+.ajout-panier-bouton p{
+    display: none;
+    text-align: center;
+}
+
+.ajout-panier-bouton-panier{
+    height:2rem;
 }
 
 .ajout-panier-info{
@@ -380,4 +628,27 @@ main{
 
 footer{
     display: none;
+}
+
+@media(min-width: 600px){
+    .recette-chiffre{
+        flex-direction: row;
+        gap: 4rem;
+    }
+    .recette-chiffre-barre{
+        display: block;
+    }
+    .recette-chiffre-barre-separe{
+        display: flex;
+        gap: 3rem;
+    }
+
+    .header-1{
+        height: 5rem;
+    }
+    .header-1 img{
+        min-width: 4rem;
+        min-height: 3rem;
+    }
+
 }
