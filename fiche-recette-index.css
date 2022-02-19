@@ -443,12 +443,6 @@ main{
     width:40%;
 }
 
-.recette-chiffre-compteur-moins, .recette-chiffre-compteur-plus, {
-    max-width: 100%;
-    max-height: 100%;
-    position: relative;
-}
-
 .recette-chiffre-total-prix{
     display: flex;
     justify-content: center;
@@ -525,8 +519,8 @@ details[open] img{
     transform: rotate(-90deg)
 }
 
-details[open] p{
-    padding: 0rem 0rem 1rem 0rem;
+details[open] div{
+    padding: 1rem;
 }
 details[open] li{
     line-height: 2rem;
