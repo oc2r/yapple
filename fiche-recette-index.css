@@ -178,7 +178,11 @@ header{
 } */
 
 .logo-img{
-    height: 30px;
+    height: 2rem;
+}
+
+.logo-marque{
+    width:5rem;
 }
 
 .header-principal,.header-principal-logo{
@@ -234,7 +238,7 @@ header{
 .logo img, .compte img, .favoris img{
     object-fit: contain;
     max-height: 1rem;
-    max-width: 1rem;
+    /* max-width: 1rem; */
 }
 
 .header-principal-utilisateur-compte-favoris{
