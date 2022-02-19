@@ -164,13 +164,13 @@ img {
 
 header{
     position: fixed;
-    height: 4rem;
+    height: 3rem;
     top: 0rem;
     right: 0rem;
     left: 0rem;
     z-index:100;
     background-color: #fff;
-    padding: 4rem 1rem 1rem 1rem;
+    padding: 0.5rem;
 }
 
 /* header, div{
@@ -575,6 +575,13 @@ details[open] li{
     right: -1.3rem;
 }
 
+.bouton-plus:active{
+    width: 3rem;
+    height: 3rem;
+    top: -1.3rem;
+    right: -1.3rem;
+}
+
 .bouton-plus p{
     padding: 0;
 }
@@ -591,6 +598,10 @@ details[open] li{
 }
 
 .ingredient-card:hover{
+    box-shadow: 0rem 0rem 1rem 0.05rem #bec2b7;
+}
+
+.ingredient-card:active{
     box-shadow: 0rem 0rem 1rem 0.05rem #bec2b7;
 }
 
@@ -662,6 +673,11 @@ details[open] li{
 }
 
 .ajout-panier-bouton:hover, .ajout-panier-bouton-desktop:hover{
+    box-shadow: 0rem 0rem 0.2rem 0.05rem #bec2b7;
+    padding: 1.2rem;
+}
+
+.ajout-panier-bouton:active, .ajout-panier-bouton-desktop:active{
     box-shadow: 0rem 0rem 0.2rem 0.05rem #bec2b7;
     padding: 1.2rem;
 }
