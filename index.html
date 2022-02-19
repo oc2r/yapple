@@ -16,8 +16,8 @@
 
   <body>
     <header>
-      <nav class="header-1">
-            <div class="header-1-logo">
+      <nav class="header-principal">
+            <div class="header-principal-logo">
                 <div class="logo">
                     <img
                     class="logo-clair-img logo-img"
@@ -26,12 +26,12 @@
                     />
                 </div>
 
-                <div class="header-1-utilisateur">
-                    <div class="header-1-utilisateur-compte-favoris">
+                <div class="header-principal-utilisateur">
+                    <div class="header-principal-utilisateur-compte-favoris">
                         <div class="compte">
                         <img
                             class="compte-img logo-img"
-                            src="./image/compte-blanc.png"
+                            src="./image/compte-vert.png"
                             alt="compte"
                         />
                         </div>
@@ -39,9 +39,12 @@
                         <div class="favoris">
                         <img
                             class="favoris-img logo-img"
-                            src="./image/favoris-plein-blanc.png"
+                            src="./image/favoris-plein-vert.png"
                             alt="favoris"
                         />
+                        </div>
+                        <div>
+                            <div class="ligne-verticale"></div>
                         </div>
                     </div>
 
@@ -68,7 +71,7 @@
             </div>
         </nav>
 
-        <div class="header-2">
+        <div class="header-retour">
             <img
             class="retour-img"
             src="./image/retour.png"
@@ -82,210 +85,217 @@
             <img class="recette-img-conteneur-favoris-coeur" src="./image/favoris-vide-blanc.png" alt="">
         </div>
         <div class="ariane">
-            <p>fil d'ariane</p>
+            <p>Accueil > Liste de course par recette > Petit déj' > Viennoiseries > Croissant healthy</p>
         </div>
         
         <section class="recette">
-            <div class="recette-img-conteneur">
-                <!-- <img class="recette-img" src="./image/croissant.png" alt="croissant"/> -->
-            </div>
-
-            <div class='recette-titre'>
-                <h1 class="recette-titre">Croissant healthy</h1>
-                <div class="recette-nutriscore">
-                    <img class="recette-nutriscore-img" src="./image/nutriscore.png" alt="nutri-score"/>
+            <div class='recette-block-principal'>
+                <div class="recette-img-conteneur">
+                    <!-- <img class="recette-img" src="./image/croissant.png" alt="croissant"/> -->
                 </div>
-            </div>
 
-            <div class="recette-chiffre">
-                <div class="recette-chiffre-separe">
-                    <div class="recette-chiffre-nb-personnes">
-                        <p>Nombre de personnes</p>
-                        <div class="recette-chiffre-compteur">
-                            <div class="nb-clef recette-chiffre-compteur-moins-conteneur">
-                                <p class="nb-clef"><em>-</em></p>
-                                <!-- <img class="recette-chiffre-compteur-moins" src="image/moins.png" alt="moins"> -->
+                <div class="recette-chiffre-achat">
+                    <div class='recette-titre'>
+                        <h1 class="recette-titre-titre">Croissant healthy</h1>
+                        <div class="recette-nutriscore">
+                            <img class="recette-nutriscore-img" src="./image/nutriscore.png" alt="nutri-score"/>
+                        </div>
+                    </div>
+
+                    <div class="recette-chiffre">
+                        <div class="recette-chiffre-separe">
+                            <div class="recette-chiffre-nb-personnes">
+                                <p>Nombre de personnes</p>
+                                <div class="recette-chiffre-compteur">
+                                    <div class="nb-clef recette-chiffre-compteur-moins-conteneur">
+                                        <p class="nb-clef"><em>-</em></p>
+                                        <!-- <img class="recette-chiffre-compteur-moins" src="image/moins.png" alt="moins"> -->
+                                    </div>
+                                    <div class="nb-clef recette-chiffre-compteur-nombre"><em>3</em></div>
+                                    <div class=" recette-chiffre-compteur-moins-conteneur">
+                                        <p class="nb-clef"><em>+</em></p>
+                                        <!-- <img class="recette-chiffre-compteur-plus" src="image/plus.png" alt="plus"> -->
+                                    </div>
+                                </div>
                             </div>
-                            <div class="nb-clef recette-chiffre-compteur-nombre"><em>3</em></div>
-                            <div class=" recette-chiffre-compteur-moins-conteneur">
-                                <p class="nb-clef"><em>+</em></p>
-                                <!-- <img class="recette-chiffre-compteur-plus" src="image/plus.png" alt="plus"> -->
+                            <div class="recette-chiffre-total">
+                                <p>Prix total de la recette</p>
+                                <div class="recette-chiffre-total-prix">
+                                    <p class="nb-clef"><em>18,20</em></p>
+                                    <p><em>€</em></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="recette-chiffre-total">
-                        <p>Prix total de la recette</p>
-                        <div class="recette-chiffre-total-prix">
-                            <p class="nb-clef"><em>18,20</em></p>
-                            <p><em>€</em></p>
+                        <div class='recette-chiffre-barre-separe'>
+                            <div class="recette-chiffre-barre"></div>
+                            <div class="recette-chiffre-yapps">
+                                <p>La recette rapporte</p>
+                                <div class="recette-chiffre-yapps-compteur">
+                                    <img class="recette-chiffre-yapps-img" src="./image/yapp.png" alt="yapps" />
+                                    <p class="nb-clef"><em>180</em></p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class='recette-chiffre-barre-separe'>
-                    <div class="recette-chiffre-barre"></div>
-                    <div class="recette-chiffre-yapps">
-                        <p>La recette rapporte</p>
-                        <div class="recette-chiffre-yapps-compteur">
-                            <img class="recette-chiffre-yapps-img" src="./image/yapp.png" alt="yapps" />
-                            <p class="nb-clef"><em>180</em></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="recette-descriptif">
-                <h2>Détails</h2>
-                <div class="recette-descriptif-description">
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-                    ratione et magnam reprehenderit eligendi itaque nulla vero, mollitia
-                    fuga eaque sit labore aut at quas fugit id. Dolor ad eveniet
-                    perferendis hic dolorem ab reiciendis facere impedit eum nemo cumque
-                    doloribus quae, voluptate omnis esse est dicta beatae officia, quod
-                    accusantium. Modi enim atque quisquam voluptates voluptate earum
-                    velit. Dolorum odit aut eligendi quia? Sequi laudantium nulla,
-                    tempora necessitatibus odio non porro. Porro accusantium eos illo
-                    sed necessitatibus eaque deleniti cumque quasi, itaque vitae tenetur
-                    esse reiciendis, voluptas tempore numquam expedita eligendi earum
-                    et? Ad repellendus nobis itaque ipsa vitae?</p>
-                    <div class="recette-descriptif-description-voir-plus">
-                        <!-- <p>Voir plus</p> -->
-                    </div>
-                </div>
-                <div class="recette-descriptif-menu-deroulant">
-                    <p>Vitamines</p>
-                    <img src="./image/fleche-derouler.png" alt="fleche-derouler">
-                </div>
-                <div class="recette-descriptif-menu-deroulant">
-                    <p>Ustensiles</p>
-                    <img src="./image/fleche-derouler.png" alt="fleche-derouler">
+                    </div>          
+
+                    <div class="ajout-panier-bouton-desktop">
+                        <p><em>Ajouter</em></p>
+                        <img class="ajout-panier-bouton-panier" src="./image/panier-blanc.png" alt="panier">
+                    </div>  
                 </div>
             </div>
+            <section class="descriptif-ingredient">
+                <div class="recette-descriptif">
+                    <h2>Détails</h2>
+                    <details class="recette-descriptif-description">
+                        <summary>Et si vous réalisiez vous-même vos croissants pour le petit-déjeuner ? Vous êtes ... <span>Voir plus</span> </summary>au régime ? Pas de panique, ces croissants légers sans matière grasse sont faits pour vous. Croustillants, moelleux et diététiques, ils sont un régal pour nos papilles. Sans beurre, vous pouvez enfin vous faire plaisir au réveil. C'est une bonne raison de se lever, n'est-ce pas ? Vous allez faire des heureux autour de vous, alors lancez-vous dans cette recette de croissants !                    
+                    </details>
+                    <details class="recette-descriptif-menu-deroulant">
+                        <summary>
+                            <p>Vitamines</p>
+                            <img class="recette-descriptif-menu-deroulant-img" src="./image/fleche-derouler.png" alt="fleche-derouler">
+                        </summary>
+                        <ul>
+                            <li>Vitamine B1 / thiamine : 0.05 mg (5% AJR)</li>
+                            <li>Vitamine B2 / riboflavine : 0.09 mg (6% AJR)</li>
+                            <li>Vitamine B3 / PP niacine : 1 mg (6% AJR)</li>
+                            <li>Vitamine B5 / acide pantothénique : 0.42 mg (7% AJR)</li>
+                        </ul>
+                    </details>
+                    <details class="recette-descriptif-menu-deroulant">
+                        <summary>
+                            <p>Ustensiles</p>
+                            <img class="recette-descriptif-menu-deroulant-img" src="./image/fleche-derouler.png" alt="fleche-derouler">
+                        </summary>
+                        <ul>
+                            <li>Vitamine B1 / thiamine : 0.05 mg (5% AJR)</li>
+                            <li>Vitamine B2 / riboflavine : 0.09 mg (6% AJR)</li>
+                            <li>Vitamine B3 / PP niacine : 1 mg (6% AJR)</li>
+                            <li>Vitamine B5 / acide pantothénique : 0.42 mg (7% AJR)</li>
+                        </ul>
+                    </details>
+                </div>
+
+            <section class='ingredient'>
+                <h2>Ingrédients</h2>
+                <div class='ingredient-card-conteneur'>
+                    <div class="ingredient-card">
+                        <div class="bouton-plus">
+                            <p class="nb-clef plus">+</p>
+                        </div>
+
+                        <img class='ingredient-card-img' src="./image/ingredient-eau.jpg" alt="eau" />
+                        <div class='ingredient-card-prix'>
+                            <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
+                            <div class='ingredient-card-prix-nombre'>
+                                <p>000.00</p>
+                                <p>€</p>
+                            </div>
+                            <p><strong>Eau</strong></p>
+                            <p><span>pack 6 x 1 L</span></p>
+                        </div>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="bouton-plus">
+                            <p class="nb-clef plus">+</p>
+                        </div>
+
+                        <img class='ingredient-card-img' src="./image/ingredient-farine.jpg" alt="farine" />
+                        <div class='ingredient-card-prix'>
+                            <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
+                            <div class='ingredient-card-prix-nombre'>
+                                <p>000.00</p>
+                                <p>€</p>
+                            </div>
+                            <p><strong>Farine</strong></p>
+                            <p><span>1 kg</span></p>
+                        </div>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="bouton-plus">
+                            <p class="nb-clef plus">+</p>
+                        </div>
+
+                        <img class='ingredient-card-img' src="./image/ingredient-lait.jpg" alt="lait" />
+                        <div class='ingredient-card-prix'>
+                            <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
+                            <div class='ingredient-card-prix-nombre'>
+                                <p>000.00</p>
+                                <p>€</p>
+                            </div>
+                            <p><strong>Lait</strong></p>
+                            <p><span>1 L</span></p>
+                        </div>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="bouton-plus">
+                            <p class="nb-clef plus">+</p>
+                        </div>
+
+                        <img class='ingredient-card-img' src="./image/ingredient-levure.jpg" alt="levure" />
+                        <div class='ingredient-card-prix'>
+                            <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
+                            <div class='ingredient-card-prix-nombre'>
+                                <p>000.00</p>
+                                <p>€</p>
+                            </div>
+                            <p><strong>Levure</strong></p>
+                            <p><span>150 g</span></p>
+                        </div>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="bouton-plus">
+                            <p class="nb-clef plus">+</p>
+                        </div>
+
+                        <img class='ingredient-card-img' src="./image/ingredient-oeuf.jpg" alt="oeuf" />
+                        <div class='ingredient-card-prix'>
+                            <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
+                            <div class='ingredient-card-prix-nombre'>
+                                <p>000.00</p>
+                                <p>€</p>
+                            </div>
+                            <p><strong>Oeufs</strong></p>
+                            <p><span>6 unités</span></p>
+                        </div>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="bouton-plus">
+                            <p class="nb-clef plus">+</p>
+                        </div>
+
+                        <img class='ingredient-card-img' src="./image/ingredient-sel.jpg" alt="sel" />
+                        <div class='ingredient-card-prix'>
+                            <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
+                            <div class='ingredient-card-prix-nombre'>
+                                <p>000.00</p>
+                                <p>€</p>
+                            </div>
+                            <p><strong>Sel</strong></p>
+                            <p><span>100 g</span></p>
+                        </div>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="bouton-plus">
+                            <p class="nb-clef plus">+</p>
+                        </div>
+
+                        <img class='ingredient-card-img' src="./image/ingredient-sirop-erable.jpg" alt="sirop-erable" />
+                        <div class='ingredient-card-prix'>
+                            <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
+                            <div class='ingredient-card-prix-nombre'>
+                                <p>000.00</p>
+                                <p>€</p>
+                            </div>
+                            <p><strong>Sirop d'érable</strong> </p>
+                            <p><span>20 cl</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
-
-        <section class='ingredient'>
-            <h2>Ingrédients</h2>
-            <div class='ingredient-card-conteneur'>
-                <div class="ingredient-card">
-                    <div class="bouton-plus">
-                        <p class="nb-clef plus">+</p>
-                    </div>
-
-                    <img class='ingredient-card-img' src="./image/ingredient-eau.jpg" alt="eau" />
-                    <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
-                        <div class='ingredient-card-prix-nombre'>
-                            <p>000.00</p>
-                            <p>€</p>
-                        </div>
-                        <p><strong>Eau</strong></p>
-                        <p><span>pack 6 x 1 L</span></p>
-                    </div>
-                </div>
-                <div class="ingredient-card">
-                    <div class="bouton-plus">
-                        <p class="nb-clef plus">+</p>
-                    </div>
-
-                    <img class='ingredient-card-img' src="./image/ingredient-farine.jpg" alt="farine" />
-                    <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
-                        <div class='ingredient-card-prix-nombre'>
-                            <p>000.00</p>
-                            <p>€</p>
-                        </div>
-                        <p><strong>Farine</strong></p>
-                        <p><span>1 kg</span></p>
-                    </div>
-                </div>
-                <div class="ingredient-card">
-                    <div class="bouton-plus">
-                        <p class="nb-clef plus">+</p>
-                    </div>
-
-                    <img class='ingredient-card-img' src="./image/ingredient-lait.jpg" alt="lait" />
-                    <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
-                        <div class='ingredient-card-prix-nombre'>
-                            <p>000.00</p>
-                            <p>€</p>
-                        </div>
-                        <p><strong>Lait</strong></p>
-                        <p><span>1 L</span></p>
-                    </div>
-                </div>
-                <div class="ingredient-card">
-                    <div class="bouton-plus">
-                        <p class="nb-clef plus">+</p>
-                    </div>
-
-                    <img class='ingredient-card-img' src="./image/ingredient-levure.jpg" alt="levure" />
-                    <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
-                        <div class='ingredient-card-prix-nombre'>
-                            <p>000.00</p>
-                            <p>€</p>
-                        </div>
-                        <p><strong>Levure</strong></p>
-                        <p><span>150 g</span></p>
-                    </div>
-                </div>
-                <div class="ingredient-card">
-                    <div class="bouton-plus">
-                        <p class="nb-clef plus">+</p>
-                    </div>
-
-                    <img class='ingredient-card-img' src="./image/ingredient-oeuf.jpg" alt="oeuf" />
-                    <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
-                        <div class='ingredient-card-prix-nombre'>
-                            <p>000.00</p>
-                            <p>€</p>
-                        </div>
-                        <p><strong>Oeufs</strong></p>
-                        <p><span>6 unités</span></p>
-                    </div>
-                </div>
-                <div class="ingredient-card">
-                    <div class="bouton-plus">
-                        <p class="nb-clef plus">+</p>
-                    </div>
-
-                    <img class='ingredient-card-img' src="./image/ingredient-sel.jpg" alt="sel" />
-                    <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
-                        <div class='ingredient-card-prix-nombre'>
-                            <p>000.00</p>
-                            <p>€</p>
-                        </div>
-                        <p><strong>Sel</strong></p>
-                        <p><span>100 g</span></p>
-                    </div>
-                </div>
-                <div class="ingredient-card">
-                    <div class="bouton-plus">
-                        <p class="nb-clef plus">+</p>
-                    </div>
-
-                    <img class='ingredient-card-img' src="./image/ingredient-sirop-erable.jpg" alt="sirop-erable" />
-                    <div class='ingredient-card-prix'>
-                        <p class='ingredient-card-prix-promo'><mark>- 00 %</mark></p>
-                        <div class='ingredient-card-prix-nombre'>
-                            <p>000.00</p>
-                            <p>€</p>
-                        </div>
-                        <p><strong>Sirop d'érable</strong> </p>
-                        <p><span>20 cl</span></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <div class="aide">
-            <p>Besoin <br> d'aide ?</p>
-            <img class='aide-logo' src="./image/logo-clair.png" alt="logo-clair" />
-        </div>
-
+        
         <div class="ajout-panier">
             <div class="ajout-panier-bouton">
                 <p><em>Ajouter</em></p>
@@ -303,33 +313,54 @@
     </main>
 
     <footer>
-      <nav class="footer-utilisateur">
-        <p>Compte</p>
-        <p>Panier</p>
-        <p>Favoris</p>
-      </nav>
+        <div class="footer-principal">
+            <nav class='footer-menu'>
+                <ul class="footer-marque">
+                    <li>La marque</li>
+                </ul>
 
-      <nav class="footer-site">
-        <p>Qui sommes-nous</p>
-        <p>Qui sommes</p>
-        <p>Favoris</p>
-      </nav>
+                <ul class="footer-utilisateur">
+                    <li>Compte</li>
+                    <li>Panier</li>
+                    <li>Favoris</li>
+                </ul>
+                <div class="aide">
+                    <p>Besoin <br> d'aide ?</p>
+                    <img class='aide-logo' src="./image/logo-clair.png" alt="logo-clair" />
+                </div>
+            </nav>
 
-      <nav class="footer-juridique">
-        <p>Aide</p>
-        <p>Mentions légales</p>
-        <p>CGU / CGV</p>
-        <p>Politique cookies</p>
-      </nav>
+            <div class="footer-logo-app">
+                <p>Téléchargez l'appli !</p>
+                <div class="logo-app">
+                    <div class="footer-logo">
+                        <img src="./image/logo-fonce.png" alt="logo-blanc-yapple" />
+                    </div>
 
-      <div class="footer-logo">
-        <img src="./image/logo-fonce-blanc_.png" alt="logo-blanc-yapple" />
-      </div>
+                    <div class="footer-app">
+                        <img class='app' src="./image/app-store.png" alt="app-store" />
+                        <img class='app' src="./image/google-play.png" alt="google-play-store" />
+                    </div>
+                </div>
+            </div>
+        </div>
 
-      <div class="footer-stores">
-        <img src="./image/app-store.png" alt="app-store" />
-        <img src="./image/google-play.png" alt="google-play-store" />
-      </div>
+        <nav>
+            <ul class="footer-juridique">
+                <li>Mentions légales</li>
+                <li>CGU / CGV</li>
+                <li>Politique cookies</li>
+            </ul>
+        </nav>
+        <div class='paiement-securise'>
+            <p>Paiement 100% sécurisé</p>
+            <div class='moyen-paiement'>
+                <img class='footer-image' src="./image/cb.png" alt="carte-bleue">
+                <img class='footer-image' src="./image/visa.png" alt="carte-visa">
+                <img class='footer-image' src="./image/mastercard.png" alt="carte-mastercard">
+                <img class='footer-image' src="./image/ticket-restaurant.png" alt="ticket-restaurant">
+            </div>
+        </div>
     </footer>
   </body>
 </html>

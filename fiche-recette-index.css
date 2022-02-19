@@ -117,13 +117,13 @@ body{
 
 h1{
     font-family: 'Segoe UI Bold', system-ui, sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 2.5rem;
 }
 
 h2{
     font-family: 'Segoe UI SemiBold', system-ui, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     line-height: 2rem;
 }
@@ -148,7 +148,7 @@ strong, mark{
 
 em{
     font-family: 'Montserrat Bold', system-ui, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1rem;
 }
 
@@ -164,12 +164,13 @@ img {
 
 header{
     position: fixed;
-    height: 6rem;
+    height: 4rem;
     top: 0rem;
     right: 0rem;
     left: 0rem;
     z-index:100;
     background-color: #fff;
+    padding: 4rem 1rem 1rem 1rem;
 }
 
 /* header, div{
@@ -180,11 +181,11 @@ header{
     height: 30px;
 }
 
-.header-1,.header-1-logo{
+.header-principal,.header-principal-logo{
     justify-content: space-between;
 }
 
-.header-1, .header-1-logo, .header-1-utilisateur, .yapps-nb{
+.header-principal, .header-principal-logo, .header-principal-utilisateur, .yapps-nb{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -203,24 +204,24 @@ header{
     gap:0.5rem;
 }
 
-.header-1{
+.header-principal{
     height: 4rem;
     gap: 5px;
     padding: 0 1rem 0 1rem;
 }
 
-.header-1-utilisateur{
+.header-principal-utilisateur{
     /* gap: 5px; */
     position: relative;
     height: 50px;
 }
 
-.header-1-utilisateur:nth-child(){
+.header-principal-utilisateur:nth-child(){
     position: relative;
     height: 100%;
 }
 
-.header-1-logo{
+.header-principal-logo{
     flex-grow: 1;
     flex-basis: 0;
 }
@@ -235,25 +236,26 @@ header{
     max-width: 1rem;
 }
 
-.header-1-utilisateur-compte-favoris{
+.header-principal-utilisateur-compte-favoris{
     display: none;
+    gap: 1rem;
     flex-direction: row;
     padding: 0.5rem;
     border-radius: 1rem;
-    background-color: #A0C16C;
 }
 
-.header-2{
+.header-retour{
     position: relative;
     display: flex;
     align-items: center;
-    padding:0rem 0rem 0rem 1rem;
 }
 
 .retour-img{
     position: absolute;
-    top:-0.5rem;
-    height: 3rem;;
+    top:1.5rem;
+    height: 3rem;
+    background-color: #fff;
+    border-radius: 1rem;
 }
 
 .panier{
@@ -281,6 +283,7 @@ header{
     align-items: center;
     background-color: #A0C16C;
     border-radius: 0.2rem;
+    color: #fff;
 }
 
 .ligne-verticale{
@@ -291,10 +294,10 @@ header{
   }
 
 main{
-    padding-top: 8rem;
+    margin-top: 6.5rem;
+    margin-bottom: 6rem;
     display: flex;
     flex-direction: column;
-    margin-bottom: 6rem;
     width: 100%;
 }
 
@@ -323,7 +326,7 @@ main{
     background-color: #A0C16C;
     padding: 0.5rem;    
     max-width:80%;
-    z-index: 1;
+    z-index: 2;
     object-fit: contain;
 }
 
@@ -334,27 +337,41 @@ main{
 
 .ariane{
     display: none;
+    color: #A0C16C;
     padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .recette-titre{
     display: flex;
-    min-width:75%;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.recette-titre-titre{
+    display: inline-block;
+    max-width:70%;
 }
 
 .recette-nutriscore{
     padding: 0.5em;
-    min-width: 3rem;
+    max-width: 25%;
+    min-width: 4rem;
 }
 
 .recette-nutriscore-img{
-    min-width: 3rem;
+    min-width: 4rem;
+    max-height: 4rem;
     position: relative;
     object-fit: contain;
+}
+
+.recette-chiffre-achat{
+    display: flex;
+    flex-direction: column;
 }
 
 .recette-chiffre{
@@ -377,6 +394,7 @@ main{
 .plus{
     color: #fff;
 }
+
 
 .recette-chiffre-separe{
     display: flex;
@@ -480,18 +498,49 @@ main{
 } */
 
 .recette-descriptif-menu-deroulant{
-    padding: 1rem 0rem 1rem 0rem;
-    height: 1.5rem;
+    padding: 1rem 1rem 1rem 1rem;
+    min-height: 1.5rem;
     border-bottom: 1px solid #000;
-    display: flex;
-    justify-content: space-between;
     position:relative;
 }
 
-.recette-descriptif-menu-deroulant img{
+.recette-descriptif-description [open]{
+    padding-bottom: 0rem;
+}
+
+details > summary{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] {
+    padding: 1rem 0rem 1rem 0rem;
+    display: block;
+}
+
+details[open] img{
+    transform: rotate(-90deg)
+}
+
+details[open] p{
+    padding: 0rem 0rem 1rem 0rem;
+}
+details[open] li{
+    line-height: 2rem;
+}
+
+.recette-descriptif-menu-deroulant-img{
     position: relative;
     padding:0.2rem;
-    max-height: 100%;
+    max-height: 1.5rem;
+    object-fit: contain;
+    transition:transform 0.3s;
 }
 
 .ingredient-card-conteneur{
@@ -514,6 +563,16 @@ main{
     background-color: #A0C16C;
     border-radius: 0.2rem;
     box-shadow: 0rem 0rem 0.2rem 0.05rem #bec2b7;
+    transition: 0.3s;
+    transition: 0.3s;
+}
+
+
+.bouton-plus:hover{
+    width: 3rem;
+    height: 3rem;
+    top: -1.3rem;
+    right: -1.3rem;
 }
 
 .bouton-plus p{
@@ -528,12 +587,12 @@ main{
     width: 6rem;
     border-radius:0.2rem;
     box-shadow: 0.1rem 0.1rem 0.2rem 0.05rem #bec2b7;
+    transition: box-shadow 0.2s ease-out;
 }
 
-/* .ingredient-card:hover{
-    transition: box-shadow 0.2s ease-out 0.2s;
-    box-shadow: 0.1rem 0.1rem 0.2rem 0.05rem #bec2b7;
-} */
+.ingredient-card:hover{
+    box-shadow: 0rem 0rem 1rem 0.05rem #bec2b7;
+}
 
 .ingredient-card-img{
     max-width: 100%;
@@ -560,17 +619,14 @@ main{
 
 /* éléments fixes bas d'écran */
 .aide{
-    position: fixed;
     display: none;
-    flex-direction: column;
     gap: 0.5rem;
     align-items: center;
-    right: 1rem;
-    bottom: 7rem;
-    z-index:1;
     background-color: #A0C16C;
     padding: 0.5rem ;
     border-radius: 1rem;
+    height: 3rem;
+    color: #fff;
 }
 
 .aide-logo{
@@ -594,23 +650,39 @@ main{
     gap: 2rem;
 }
 
-.ajout-panier-bouton{
-    display: flex;
+.ajout-panier-bouton, .ajout-panier-bouton-desktop{
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     background-color: #A0C16C;
     border-radius: 0.5rem;
-    padding: 1rem 0.5rem 1rem 0.5rem;
+    padding: 1rem 1rem 1rem 1rem;
     min-width: 5rem;
+    transition: 0.3s;
 }
 
-.ajout-panier-bouton p{
+.ajout-panier-bouton:hover, .ajout-panier-bouton-desktop:hover{
+    box-shadow: 0rem 0rem 0.2rem 0.05rem #bec2b7;
+    padding: 1.2rem;
+}
+
+.ajout-panier-bouton-desktop{
     display: none;
+}
+
+.ajout-panier-bouton{
+    display:flex;
+}
+
+.ajout-panier-bouton p, .ajout-panier-bouton-desktop p{
     text-align: center;
+    color: #fff;
+    display:inline;
+    padding-top: 0.2rem
 }
 
 .ajout-panier-bouton-panier{
-    height:2rem;
+    height:1.2rem;
 }
 
 .ajout-panier-info{
@@ -624,13 +696,80 @@ main{
     gap: 0.5rem;
 }
 
-/* éléments fixes bas d'écran */
-
 footer{
     display: none;
+    flex-direction: column;
+    gap:2rem;
+    align-items: center;
+    justify-content: space-around;
+    padding:  3rem 1rem 3rem 1rem;
+    box-shadow: 0rem 0rem 0.2rem 0.05rem #bec2b7;
+}
+
+.footer-principal{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-logo-app{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-menu, .logo-app{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.footer-menu ul{
+    line-height: 1.5rem;
+    width: 7rem;
+    color: #A0C16C;
+}
+
+.footer-juridique{
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    border-radius: 1rem;
+}
+
+.footer-logo img{
+    height: 4rem;
+}
+
+.footer-app{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.paiement-securise{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moyen-paiement{
+    display: flex;
+    gap:1rem;
+}
+
+.footer-image{
+    width: 1rem;
 }
 
 @media(min-width: 600px){
+    
     .recette-chiffre{
         flex-direction: row;
         gap: 4rem;
@@ -642,13 +781,96 @@ footer{
         display: flex;
         gap: 3rem;
     }
-
-    .header-1{
-        height: 5rem;
+    .ajout-panier-bouton-panier{
+        height:2rem;
     }
-    .header-1 img{
+    .header-principal{
+        max-height: 10rem;
+    }
+    .header-principal img{
         min-width: 4rem;
         min-height: 3rem;
     }
 
+    .ingredient-card-conteneur{
+        justify-content: space-around;
+    }
+    .ingredient-card{
+        width: 7rem;
+    }
+
+}
+
+@media(min-width: 1024px){
+
+    header{
+        padding: 1rem 5rem 1rem 5rem;
+    }
+    .header-principal-utilisateur-compte-favoris{
+        display: flex;
+    }
+    .logo, .compte, .favoris, .ligne-verticale{
+        display: flex;
+    }
+    .header-principal{
+        gap:1rem;
+    }
+    main{
+        margin-bottom: 2rem;
+    }
+    .ariane{
+        display: inline;
+    }
+    .recette-block-principal{
+        display: flex; /*pb image*/
+        justify-content: space-between;
+    }
+    .recette-img-conteneur-favoris{
+        top:7.5rem;
+    }
+    .recette-chiffre{
+        flex-direction: row;
+    }
+    .recette-chiffre-achat{
+        padding:2rem;
+        width: 50%;
+    }        
+    .recette-chiffre-barre{
+        display: none;
+    }
+    .recette-chiffre-barre-separe p{
+        margin-block-start:0;
+    }
+    .recette-chiffre-nb-personnes, .recette-chiffre-total, .recette-chiffre-yapps {
+        justify-content: flex-start;
+    }
+    .recette-img-conteneur{
+        width: 50%;
+        height: auto;
+    }
+    .ajout-panier{
+        display: none;
+    }
+    .ajout-panier-bouton-desktop{
+        display: flex;
+    }
+    .descriptif-ingredient{
+        display: flex;
+        flex-direction: row;
+    }
+    .recette-descriptif{
+        width:50%;
+    }
+    .ingredient{
+        width: 50%;
+    }
+    footer{
+        display: flex;
+    }
+    .app{
+        width:4rem;
+    }
+    .aide{
+        display: flex;
+    }
 }
